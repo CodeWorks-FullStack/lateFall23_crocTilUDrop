@@ -4,6 +4,11 @@
   --dark: #151515;
 }
 
+a{
+  /* FIXME I added this in after class for a link at the bottom of the page */
+  color: white;
+}
+
 body{
   background-color: var(--page);
   font-family: Arial, Helvetica, sans-serif;
@@ -28,12 +33,14 @@ font-family: 'IBM Plex Mono';
   background-position: bottom;
 }
 
-/* NOTE these should be set up for mobile first */
+/* NOTE when making alternate styles for screen sizes should set up for mobile first */
 .magic-card{
   display: none;
+
   /* the rest here stays the same, since it isn't changed in our media rule */
   bottom: -100px;
   position: absolute;
+  /* the position absolute breaks the card out of the flow of HTML and attaches it to the next containing block (the col has position-relative on in it the HTML) while the -100px moves id down below the row */
   width: 100%;
   border-radius: 12px;
   background: rgba(29, 29, 29, 0.60);
@@ -53,6 +60,7 @@ font-family: 'IBM Plex Mono';
   }
   .magic-offset{
     margin-bottom: 100px;
+    /* since our card is 100px below the row (bottom -100px in .magic-card), this offset margin bottom makes sure nothing else gets rendered in that spot */
   }
 }
 
@@ -66,9 +74,14 @@ font-family: 'IBM Plex Mono';
   /* NOTE position relative will create a new CONTAINING BLOCK but keep the elements original flow */
   position: relative;
 }
+/* this magic-col class ended up going un-used and we used boostrap utility classes instead */
 
 .bg-croc-primary{
   color: whitesmoke;
+  background-color: var(--primary);
+}
+
+.bg-purple{
   background-color: var(--primary);
 }
 

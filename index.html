@@ -14,6 +14,7 @@
 </head>
 
 <body class=" ">
+  <!-- NOTE sticky top makes the nav bar stick to the parent, in this case the nav sticks to the body -->
   <nav class="bg-black sticky-top">
     <div class="text-croc-primary fs-4 fw-bold p-2 font-jolly">
       <i class="mdi mdi-shoe-cleat"></i>🐊 Croc Til U Drop
@@ -37,6 +38,7 @@
   <section class="row">
     <!-- STUB shop filter -->
     <div class="col-12 col-md-3 mb-5 mb-md-0">
+      <!-- NOTE sticky top here, sticks the filter form to the top of this column, so as you scoll the filter is always next to the shop items -->
       <form class="shop-filter rounded row text-light sticky-top">
         <div class="mb-2 col-12 p-2 fs-4 fw-medium text-center">
           <i class="mdi mdi-filter text-croc-primary"></i>Filter
@@ -80,7 +82,8 @@
 
     <!-- STUB shop items -->
     <div class="col-12 col-md-9">
-      <!-- REVIEW rows can be nested in columns to break them down into another 12 segments -->
+      <!-- REVIEW rows can be nested in columns to get into another 12 segments -->
+      <!-- this lets us create a side by side display for the filter and shop items -->
       <section class="row">
         <!-- 🎴 -->
         <div class="col-6 col-md-4">
@@ -298,6 +301,10 @@
   </section>
 
 </main>
+<footer class="bg-purple text-center text-light p-2">
+  <a href="https://www.figma.com/file/7zBPh0NHoq15YI5KDOtFHe/Croc-Til-U-Drop?type=design&node-id=0%3A1&mode=dev" target="_blank">Complete the Look <i class="mdi mdi-link"></i></a>
+  <!-- FIXME sorry forgot this in the final design but it was in the figma -->
+</footer>
   
 </body>
 </html>
