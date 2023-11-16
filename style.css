@@ -6,6 +6,15 @@
 
 body{
   background-color: var(--page);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-jolly{
+font-family: 'Jolly Lodger', 'Arial';
+}
+
+.font-mono{
+font-family: 'IBM Plex Mono';
 }
 
 .text-croc-primary{
@@ -19,7 +28,10 @@ body{
   background-position: bottom;
 }
 
+/* NOTE these should be set up for mobile first */
 .magic-card{
+  display: none;
+  /* the rest here stays the same, since it isn't changed in our media rule */
   bottom: -100px;
   position: absolute;
   width: 100%;
@@ -31,7 +43,17 @@ body{
 }
 
 .magic-offset{
-  margin-bottom: 100px;
+  margin-bottom: 0px;
+}
+
+/* REVIEW this is where our medium screen exceptions apply */
+@media (min-width: 768px){
+  .magic-card{
+    display: block;
+  }
+  .magic-offset{
+    margin-bottom: 100px;
+  }
 }
 
 .magic-card:hover{
@@ -64,4 +86,8 @@ body{
 
 .shop-filter{
   background-color: var(--dark);
+  top: 65px
+}
+.shop-filter input{
+  accent-color: var(--primary);
 }

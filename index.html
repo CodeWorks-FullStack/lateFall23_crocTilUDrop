@@ -6,22 +6,25 @@
   <title>🐊🍔</title>
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Jolly+Lodger&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js" defer></script>
 </head>
 
-<body class="">
-<header class="container-fluid bg-black">
-  <nav class="row">
-    <div class="text-croc-primary fs-4 fw-bold p-2">
+<body class=" ">
+  <nav class="bg-black sticky-top">
+    <div class="text-croc-primary fs-4 fw-bold p-2 font-jolly">
       <i class="mdi mdi-shoe-cleat"></i>🐊 Croc Til U Drop
     </div>
   </nav>
+<header class="container-fluid">
   <section class="row bg-hero justify-content-center align-items-end magic-offset">
     <!-- NOTE  -->
     <div class="col-11 col-md-7 position-relative h-100 p-0">
       <div class="magic-card  p-3 text-light">
-        <p class="lh-lg">Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. How’s business?  </p>
+        <p class="lh-lg font-mono">Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. Always remember in the jungle there’s a lot of they in there, after you overcome they, you will make it to paradise. How’s business?  </p>
         <div class="text-end">
           <button class="btn bg-croc-primary rounded-pill">Sign Up <i class="mdi mdi-clipboard-plus"></i></button>
         </div>
@@ -33,24 +36,33 @@
 <main class="container pt-5">
   <section class="row">
     <!-- STUB shop filter -->
-    <div class="col-3">
-      <form class="shop-filter rounded row text-light">
+    <div class="col-12 col-md-3 mb-5 mb-md-0">
+      <form class="shop-filter rounded row text-light sticky-top">
         <div class="mb-2 col-12 p-2 fs-4 fw-medium text-center">
           <i class="mdi mdi-filter text-croc-primary"></i>Filter
         </div>
-        <div class="mb-2">
+        <div class="mb-2 col-4 col-md-12 order-0">
+          <label for="Search">Search</label>
+          <input name="Search" type="text" class="form-control">
+        </div>
+        <div class="mb-2 col-4 col-md-12 order-2 order-md-1">
           <label for="price">Price</label>
-          <input name="price" type="range" class="form-control">
+          <input name="price" type="range" min="10" max="100" step="10" class="form-range">
         </div>
-        <div class="mb-2">
+        <div class="mb-2 col-4 col-md-12 order-1 order-md-2">
           <label for="size">Size</label>
-          <input name="size" type="text" class="form-control">
+          <select name="size" class="form-control">
+            <option value="" disabled selected>select size</option>
+            <option value="">small</option>
+            <option value="">medium</option>
+            <option value="">large</option>
+          </select>
         </div>
-        <div class="mb-2 form-check ms-3 d-flex">
+        <div class="mb-2 col-4 col-md-12 order-4 order-md-3 form-check ms-3 d-flex">
           <input type="checkbox" class="form-check-input">
           <label for="extreme" class="form-check-label ps-2">Extreme</label>
         </div>
-        <div class="mb-2">
+        <div class="mb-2 col-4 col-md-12 order-3 order-md-4">
           <label for="color">Color</label>
           <div class="ms-3">
             <div>
@@ -67,11 +79,11 @@
 
 
     <!-- STUB shop items -->
-    <div class="col-9">
+    <div class="col-12 col-md-9">
       <!-- REVIEW rows can be nested in columns to break them down into another 12 segments -->
       <section class="row">
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/209392_510_ALT110/crocs" alt="">
             <div class="p-1">
@@ -85,7 +97,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/208600_5AE_ALT110/crocs" alt="">
             <div class="p-1">
@@ -99,7 +111,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/209392_510_ALT110/crocs" alt="">
             <div class="p-1">
@@ -113,7 +125,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/209393_066_ALT110/crocs" alt="">
             <div class="p-1">
@@ -127,7 +139,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/208688_90H_ALT110/crocs" alt="">
             <div class="p-1">
@@ -141,7 +153,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/207838_90L_ALT110/crocs" alt="">
             <div class="p-1">
@@ -155,7 +167,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/208527_680_ALT110/crocs" alt="">
             <div class="p-1">
@@ -169,7 +181,7 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/210069_6WD_ALT110/crocs" alt="">
             <div class="p-1">
@@ -183,7 +195,91 @@
         </div>
         <!--  -->
         <!-- 🎴 -->
-        <div class="col-4">
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/207735_6QQ_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Lisa Frank Mega Crush</div>
+              <p class="text-secondary">sandals, mens, womens, Lisa Frank, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/208527_680_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Hello Kitty Classic Clog</div>
+              <p class="text-secondary">sandals, mens, womens, sanrio, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/210069_6WD_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Dark Cherry Geo Clog</div>
+              <p class="text-secondary">sandals, mens, womens, mcdonalds, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/207735_6QQ_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Lisa Frank Mega Crush</div>
+              <p class="text-secondary">sandals, mens, womens, Lisa Frank, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/208527_680_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Hello Kitty Classic Clog</div>
+              <p class="text-secondary">sandals, mens, womens, sanrio, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
+          <div class="shop-card rounded shadow p-1">
+            <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/210069_6WD_ALT110/crocs" alt="">
+            <div class="p-1">
+              <div class="text-light fw-bold">Dark Cherry Geo Clog</div>
+              <p class="text-secondary">sandals, mens, womens, mcdonalds, purple</p>
+              <div class="text-end">
+                <button class="btn bg-croc-primary">see details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <!-- 🎴 -->
+        <div class="col-6 col-md-4">
           <div class="shop-card rounded shadow p-1">
             <img class="img-fluid border-bottom border-secondary" src="https://media.crocs.com/images/t_pdphero/f_auto%2Cq_auto/products/207735_6QQ_ALT110/crocs" alt="">
             <div class="p-1">
